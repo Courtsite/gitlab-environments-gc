@@ -19,7 +19,7 @@ func CleanupEnvironments(client *gitlab.Client, projectID interface{}) error {
 	log.Printf("🌲 Listing environments for %s\n", projectID)
 
 	opts := &gitlab.ListEnvironmentsOptions{
-		PerPage: 100,
+		PerPage: 200,
 	}
 	envs, _, err := client.Environments.ListEnvironments(projectID, opts)
 	if err != nil {

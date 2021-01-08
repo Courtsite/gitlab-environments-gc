@@ -9,5 +9,5 @@ gcloud functions deploy gitlab-environments-gc \
     --runtime=go113 \
     --env-vars-file=.env.yaml \
     --trigger-http \
-    --timeout=60s \
+    --timeout=120s \
     --max-instances=1

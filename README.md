@@ -17,6 +17,8 @@ This function does not clean up the actual environment (e.g. Kubernetes resource
 
 Behind the scenes, the function will STOP the environment, and DELETE it.
 
+To avoid hitting rate limits, and also timing out, this function currently only handles up to 200 environments at a time. If you have lots of environments, consider running this function more regularly.
+
 **Why is this needed?**
 
 At the time of writing, you can use `auto_stop_in` to automatically "stop" environments.
