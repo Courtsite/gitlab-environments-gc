@@ -89,5 +89,6 @@ func isProtectedEnvironment(env *gitlab.Environment) bool {
 }
 
 func isActiveEnvironment(env *gitlab.Environment) bool {
-	return env.LastDeployment != nil && env.LastDeployment.UpdatedAt != nil && env.LastDeployment.UpdatedAt.UTC().Add(time.Hour*24*14).After(time.Now().UTC())
+	twoWeeks := time.Hour * 24 * 7 * 2
+	return env.LastDeployment != nil && env.LastDeployment.UpdatedAt != nil && env.LastDeployment.UpdatedAt.UTC().Add(twoWeeks).After(time.Now().UTC())
 }
