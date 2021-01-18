@@ -2,7 +2,11 @@
 
 🗑️ A simple Google Cloud Function in Go to clean up stale [Environments in GitLab](https://docs.gitlab.com/ee/ci/environments/) - it can be triggered regularly using [Cloud Scheduler](https://cloud.google.com/scheduler).
 
+![Clean Up Logs in Cloud Function](screenshot.jpg "Clean Up Logs in Cloud Function")
+
+
 ---
+
 
 **What environments are considered "stale"?**
 
